@@ -338,9 +338,7 @@ body {
 
 
 
-// product page css
-/* Main product page */
-
+/* product page css */
 .product-page {
     text-align: center;
     padding: 40px;
@@ -394,8 +392,7 @@ body {
     background: #333;
 }
 
-
-//order page
+/* order page */
 
 .order-page {
     min-height: 100vh;
