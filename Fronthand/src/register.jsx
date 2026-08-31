@@ -26,9 +26,8 @@ const Register = () => {
     try {
 
       // ⭐ CHANGED FOR BACKEND
-      // Send data from React to Express backend
-      const response = await fetch("http://localhost:5001/api/register", {
-
+      // Send data from React to Express backend  // connect it to render deploy link 
+      const response = await fetch("https://premium-fashion-ecommerce.onrender.com/api/register", {
         method: "POST",
 
         headers: {
