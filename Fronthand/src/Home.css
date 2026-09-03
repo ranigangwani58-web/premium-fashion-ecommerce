@@ -460,3 +460,37 @@ body {
 .order-box button:hover {
     background: #333;
 }
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+
+    html,
+    body {
+        overflow-x: hidden !important;
+    }
+
+    section img {
+        width: 80px !important;
+        height: 117px !important;
+    }
+
+
+    section img {
+        width: 80px !important;
+        height: 117px !important;
+    }
+
+    .contant_1,
+    .contant_2 {
+        font-size: 18px !important;
+    }
+
+}
