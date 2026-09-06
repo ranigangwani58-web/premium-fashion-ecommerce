@@ -464,51 +464,75 @@ body {
 
 
 
-
 @media screen and (max-width: 600px) {
+
+    /* =========================
+       GENERAL MOBILE
+    ========================= */
 
     html,
     body {
-        overflow-x: hidden !important;
+        width: 100%;
         margin: 0;
         padding: 0;
+        overflow-x: hidden;
     }
 
+
+    /* =========================
+       HOME NAVBAR
+    ========================= */
+
     .container {
-        width: 100% !important;
+        width: 100%;
         height: 50px;
         margin: 0;
+        padding: 0;
         display: flex;
         align-items: center;
-        margin-top: 5px;
+        box-sizing: border-box;
     }
 
     .container .logo {
-        font-size: 14px !important;
+        font-size: 14px;
         margin-left: 10px;
     }
 
     .container .contact {
-        font-size: 10px !important;
-        margin-left: auto !important;
+        font-size: 11px;
+        margin-left: auto;
+        margin-right: 10px;
+        padding: 5px;
+    }
+
+
+    /* =========================
+       HOME CONTENT
+    ========================= */
+
+    .contant {
+        display: flex;
+        width: 100%;
+        margin-top: 15px;
+        box-sizing: border-box;
+    }
+
+    .contant_1 {
+        font-size: 12px;
+        margin-left: 10px;
+        margin-right: 5px;
+    }
+
+    .contant_2 {
+        font-size: 12px;
+        margin-left: auto;
         margin-right: 10px;
     }
 
-    .contant {
-        margin-top: 10px;
-    }
 
-    .contant_1,
-    .contant_2 {
-        font-size: 12px !important;
-    }
-
-    section img {
-        margin-top: 48px !important;
-        margin-bottom: 30px !important;
-        width: 80px !important;
-        height: 117px !important;
-    }
+    /* =========================
+       HOME IMAGES
+    ========================= */
 
     .image-wrapper {
         height: auto;
@@ -516,31 +540,232 @@ body {
     }
 
     .image-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    section img {
+        width: 60px;
+        height: 90px;
+        margin-top: 45px;
+        margin-left: 2px;
+        margin-right: 2px;
+        margin-bottom: 30px;
+    }
+
+
+    /* =========================
+       PRODUCT CARDS
+    ========================= */
+
+    .new-images {
+        display: flex;
         flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        padding: 5px;
     }
 
     .img-box {
-        width: 160px;
+        width: 145px;
+        padding: 8px;
+        margin-top: 10px;
+        box-sizing: border-box;
     }
 
     .img-box img {
-        width: 140px;
-        height: 210px;
+        width: 129px;
+        height: 190px;
     }
 
-    .register-box,
-    .contact-page,
-    .order-box {
-        width: 90%;
-        padding: 20px;
+    .img-box p {
+        font-size: 14px;
+        margin: 8px 0;
     }
+
+
+    /* =========================
+       REGISTER PAGE
+    ========================= */
+
+    .register-section {
+        width: 100%;
+        padding: 40px 15px;
+        margin-top: 20px;
+        box-sizing: border-box;
+    }
+
+    .register-box {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 25px 20px;
+        box-sizing: border-box;
+    }
+
+    .register-box h1 {
+        font-size: 26px;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .register-box label {
+        font-size: 15px;
+        margin-top: 14px;
+    }
+
+    .register-box input {
+        width: 100%;
+        padding: 11px;
+        font-size: 15px;
+        box-sizing: border-box;
+    }
+
+    .register-box button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+
+    /* =========================
+       CONTACT PAGE
+    ========================= */
+
+    .contact-page {
+        width: calc(100% - 30px);
+        max-width: 500px;
+        margin: 40px auto;
+        padding: 25px 20px;
+        box-sizing: border-box;
+    }
+
+    .contact-page h1 {
+        font-size: 26px;
+        margin-bottom: 25px;
+    }
+
+    .contact-page form {
+        width: 100%;
+        gap: 12px;
+    }
+
+    .contact-page input,
+    .contact-page textarea {
+        width: 100%;
+        padding: 12px;
+        font-size: 15px;
+        box-sizing: border-box;
+    }
+
+    .contact-page textarea {
+        height: 130px;
+    }
+
+    .contact-page button {
+        width: 100%;
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .contact-page .back {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+
+    /* =========================
+       PRODUCT PAGE
+    ========================= */
 
     .product-page {
-        padding: 20px;
+        width: 100%;
+        min-height: 100vh;
+        padding: 30px 15px;
+        box-sizing: border-box;
     }
 
     .product-image img {
         width: 200px;
         height: 280px;
+    }
+
+    .product-info {
+        margin-top: 20px;
+    }
+
+    .product-info h1 {
+        font-size: 24px;
+    }
+
+    .product-info p {
+        font-size: 15px;
+    }
+
+    .product-info h2 {
+        font-size: 21px;
+    }
+
+    .sizes button {
+        padding: 9px 15px;
+        margin: 4px;
+    }
+
+    .buy-button {
+        width: 180px;
+        padding: 12px;
+    }
+
+
+    /* =========================
+       ORDER PAGE
+    ========================= */
+
+    .order-page {
+        width: 100%;
+        min-height: 100vh;
+        padding: 30px 15px;
+        box-sizing: border-box;
+    }
+
+    .order-box {
+        width: 100%;
+        max-width: 500px;
+        padding: 25px 20px;
+        box-sizing: border-box;
+    }
+
+    .order-box h1 {
+        font-size: 25px;
+    }
+
+    .order-box p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .order-box label {
+        font-size: 14px;
+    }
+
+    .order-box input,
+    .order-box textarea {
+        width: 100%;
+        padding: 11px;
+        font-size: 15px;
+        box-sizing: border-box;
+    }
+
+    .order-box textarea {
+        height: 90px;
+    }
+
+    .order-box button {
+        width: 100%;
+        padding: 12px;
+        font-size: 15px;
     }
 }
