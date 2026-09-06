@@ -464,11 +464,13 @@ body {
 
 
 
-@media screen and (max-width: 360px) {
+/*
+   PHONE RESPONSIVE CSS
+   Works for phones up to 600px wide */
 
-    /* =========================
-       GENERAL MOBILE
-    ========================= */
+@media screen and (max-width: 600px) {
+
+    /* ---------- GENERAL ---------- */
 
     html,
     body {
@@ -476,144 +478,164 @@ body {
         margin: 0;
         padding: 0;
         overflow-x: hidden;
+        box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
     }
 
 
-    /* =========================
-       HOME NAVBAR
-    ========================= */
+    /* ---------- HOME NAVBAR ---------- */
 
     .container {
         width: 100%;
-        height: 50px;
+        height: 55px;
         margin: 0;
-        padding: 0;
+        padding: 0 12px;
+
         display: flex;
         align-items: center;
-        box-sizing: border-box;
+        justify-content: space-between;
+
+        font-size: 16px;
     }
 
     .container .logo {
-        font-size: 14px;
-        margin-left: 10px;
+        margin: 0;
+        font-size: 15px;
+        white-space: nowrap;
     }
 
     .container .contact {
-        font-size: 11px;
-        margin-left: auto;
-        margin-right: 10px;
+        margin: 0;
         padding: 5px;
+        font-size: 13px;
+        white-space: nowrap;
     }
 
 
-    /* =========================
-       HOME CONTENT
-    ========================= */
+    /* ---------- HOME CONTENT ---------- */
 
     .contant {
-        display: flex;
         width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
         margin-top: 15px;
-        box-sizing: border-box;
+        padding: 0 12px;
     }
 
     .contant_1 {
-        font-size: 12px;
-        margin-left: 10px;
-        margin-right: 5px;
+        margin: 0;
+        font-size: 13px;
     }
 
     .contant_2 {
-        font-size: 12px;
-        margin-left: auto;
-        margin-right: 10px;
+        margin: 0;
+        font-size: 13px;
+        text-align: right;
     }
 
 
-    /* =========================
-       HOME IMAGES
-    ========================= */
+    /* ---------- HOME IMAGE SECTION ---------- */
 
     .image-wrapper {
+        width: 100%;
         height: auto;
-        min-height: 500px;
+        min-height: 430px;
+        overflow: hidden;
     }
 
     .image-section {
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: nowrap;
-        width: 100%;
+
+        padding: 20px 5px 40px;
     }
 
     section img {
-        width: 60px;
-        height: 90px;
-        margin-top: 45px;
-        margin-left: 2px;
-        margin-right: 2px;
-        margin-bottom: 30px;
+        width: 17vw;
+        max-width: 75px;
+        min-width: 50px;
+
+        height: auto;
+        aspect-ratio: 2 / 3;
+
+        object-fit: cover;
+
+        margin: 50px 1px 30px;
+        border-radius: 3%;
     }
 
 
-    /* =========================
-       PRODUCT CARDS
-    ========================= */
+    /* ---------- PRODUCT CARDS ---------- */
 
     .new-images {
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 8px;
-        padding: 5px;
+
+        gap: 10px;
+        padding: 10px;
     }
 
     .img-box {
-        width: 145px;
+        width: calc(50% - 10px);
+        max-width: 180px;
+
         padding: 8px;
-        margin-top: 10px;
-        box-sizing: border-box;
+        margin: 0;
+
+        background: #f5f0e6;
     }
 
     .img-box img {
-        width: 129px;
-        height: 190px;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 2 / 3;
+
+        object-fit: cover;
     }
 
     .img-box p {
-        font-size: 14px;
+        font-size: 13px;
         margin: 8px 0;
+        text-align: center;
     }
 
 
-    /* =========================
-       REGISTER PAGE
-    ========================= */
+    /* ---------- REGISTER PAGE ---------- */
 
     .register-section {
         width: 100%;
         padding: 40px 15px;
         margin-top: 20px;
-        box-sizing: border-box;
     }
 
     .register-box {
         width: 100%;
         max-width: 400px;
+
         margin: 0 auto;
         padding: 25px 20px;
-        box-sizing: border-box;
     }
 
     .register-box h1 {
-        font-size: 26px;
+        font-size: 25px;
         margin-top: 0;
         margin-bottom: 20px;
     }
 
     .register-box label {
-        font-size: 15px;
+        font-size: 14px;
         margin-top: 14px;
     }
 
@@ -621,35 +643,36 @@ body {
         width: 100%;
         padding: 11px;
         font-size: 15px;
-        box-sizing: border-box;
     }
 
     .register-box button {
         width: 100%;
         padding: 12px;
-        font-size: 16px;
+        font-size: 15px;
     }
 
 
-    /* =========================
-       CONTACT PAGE
-    ========================= */
+    /* ---------- CONTACT PAGE ---------- */
 
     .contact-page {
         width: calc(100% - 30px);
         max-width: 500px;
+
         margin: 40px auto;
-        padding: 25px 20px;
-        box-sizing: border-box;
+        padding: 25px 18px;
+
+        border-radius: 10px;
     }
 
     .contact-page h1 {
-        font-size: 26px;
+        font-size: 25px;
         margin-bottom: 25px;
     }
 
     .contact-page form {
         width: 100%;
+        display: flex;
+        flex-direction: column;
         gap: 12px;
     }
 
@@ -657,8 +680,8 @@ body {
     .contact-page textarea {
         width: 100%;
         padding: 12px;
+
         font-size: 15px;
-        box-sizing: border-box;
     }
 
     .contact-page textarea {
@@ -677,23 +700,26 @@ body {
     }
 
 
-    /* =========================
-       PRODUCT PAGE
-    ========================= */
+    /* ---------- PRODUCT PAGE ---------- */
 
     .product-page {
         width: 100%;
         min-height: 100vh;
+
         padding: 30px 15px;
-        box-sizing: border-box;
     }
 
     .product-image img {
         width: 200px;
-        height: 280px;
+        max-width: 80%;
+        height: auto;
+        aspect-ratio: 5 / 7;
+
+        object-fit: cover;
     }
 
     .product-info {
+        width: 100%;
         margin-top: 20px;
     }
 
@@ -703,47 +729,57 @@ body {
 
     .product-info p {
         font-size: 15px;
+        line-height: 1.5;
     }
 
     .product-info h2 {
         font-size: 21px;
     }
 
+    .sizes {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
     .sizes button {
         padding: 9px 15px;
-        margin: 4px;
+        margin: 2px;
     }
 
     .buy-button {
         width: 180px;
+        max-width: 100%;
+
+        margin: 25px auto;
         padding: 12px;
     }
 
 
-    /* =========================
-       ORDER PAGE
-    ========================= */
+    /* ---------- ORDER PAGE ---------- */
 
     .order-page {
         width: 100%;
         min-height: 100vh;
+
         padding: 30px 15px;
-        box-sizing: border-box;
     }
 
     .order-box {
         width: 100%;
         max-width: 500px;
-        padding: 25px 20px;
-        box-sizing: border-box;
+
+        padding: 25px 18px;
     }
 
     .order-box h1 {
-        font-size: 25px;
+        font-size: 24px;
     }
 
     .order-box p {
         font-size: 14px;
+        line-height: 1.5;
         margin-bottom: 20px;
     }
 
@@ -756,7 +792,6 @@ body {
         width: 100%;
         padding: 11px;
         font-size: 15px;
-        box-sizing: border-box;
     }
 
     .order-box textarea {
@@ -767,5 +802,59 @@ body {
         width: 100%;
         padding: 12px;
         font-size: 15px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+   Example: 320px–350px
+========================================= */
+
+@media screen and (max-width: 350px) {
+
+    .container {
+        padding: 0 8px;
+    }
+
+    .container .logo {
+        font-size: 13px;
+    }
+
+    .container .contact {
+        font-size: 11px;
+    }
+
+    .contant {
+        padding: 0 8px;
+    }
+
+    .contant_1,
+    .contant_2 {
+        font-size: 11px;
+    }
+
+    section img {
+        min-width: 45px;
+    }
+
+    .img-box {
+        width: calc(50% - 8px);
+        padding: 6px;
+    }
+
+    .img-box p {
+        font-size: 12px;
+    }
+
+    .register-section,
+    .order-page {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .contact-page {
+        width: calc(100% - 20px);
+        padding: 20px 15px;
     }
 }
